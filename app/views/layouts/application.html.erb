@@ -37,6 +37,9 @@
     <meta property="og:image" content="<%= logo_image %>" />
     <meta name="viewport" content= "width=device-width, user-scalable=no">
     <%= csrf_meta_tags %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet"> 
 
     <!-- Global javascript variables and helpers. -->
     <script type="text/javascript">
@@ -63,10 +66,10 @@
   <body class="app-background" data-controller="<%= controller_name %>" data-action="<%= action_name %>" data-relative-root="<%= Rails.configuration.relative_url_root || "/" %>">
     <%= render "shared/header" %>
 
-    <div class="wrapper">
+    <div dir="rtl" class="wrapper">
       <% if bigbluebutton_endpoint_default? %>
         <div class="alert alert-icon alert-danger text-center mb-0">
-          <div class="flash alert d-inline">
+          <div dir="rtl" class="flash alert d-inline">
             <i class="fas fa-exclamation-triangle"></i>
             <p class="d-inline"><%= t("test_install",
               href: link_to(t("docs").downcase, "http://docs.bigbluebutton.org/install/greenlight-v2.html#2-install-greenlight", target: "_blank", rel: "noopener")
@@ -77,7 +80,7 @@
 
       <% unless Rails.configuration.banner_message.blank? %>
         <div class="alert alert-icon alert-danger text-center mb-0">
-          <div class="flash alert d-inline">
+          <div dir="rtl" class="flash alert d-inline">
             <p class="d-inline"><%= Rails.configuration.banner_message %></p>
           </div>
         </div>
