@@ -14,12 +14,16 @@
 %>
 
 <div class="background">
-  <div class="container pt-9 pb-8">
-    <div class="row">
-      <div class="col-md-12 col-sm-12 text-center">
-        <h1 id="main-text" class="display-4 mb-4"> <%= t("landing.welcome").html_safe %></h1>
-        <p {text-align: left;}class="lead offset-lg-2 col-lg-8 col-sm-12 "><%= t("landing.about", href: link_to(t("greenlight"), "https://bigbluebutton.org/2018/07/09/greenlight-2-0/", target: "_blank", rel: "noopener")).html_safe %></p>
+  <div>
+    <div class="row lan-pg">
+      <div class="col-md-6 col-sm-6 text-center">
+        <h1 id="main-text" class="display-4 mb-4 landing"> <%= t("landing.welcome").html_safe %></h1>
+        <p {text-align: left;}class="lead offset-lg-2 col-lg-8 col-sm-12"><%= t("landing.about", href: link_to(t("greenlight"), "https://bigbluebutton.org/2018/07/09/greenlight-2-0/", target: "_blank", rel: "noopener")).html_safe %></p>
+           <p {text-align: left;}class="lead offset-lg-2 col-lg-8 col-sm-12"><%= t("landing.about2", href: link_to(t("greenlight"), "https://bigbluebutton.org/2018/07/09/greenlight-2-0/", target: "_blank", rel: "noopener")).html_safe %></p>
         
+      </div>
+      <div class="col-md-6 col-sm-6 text-center">
+        <%= image_tag("iran1.jpg", class: "landing-image") %>
       </div>
 
     </div>
